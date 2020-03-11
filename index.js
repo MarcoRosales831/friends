@@ -24,7 +24,7 @@ app.get("/friends", function(req,res){
     res.render("friends", {friends: friendList});
 });
 
-app.post(".addfriend", function(req, res){
+app.post("/addfriend", function(req, res){
     var newfriend = req.body.newfriend;
     friendList.push(newfriend);
     res.redirect("/friends");
